@@ -8,15 +8,38 @@
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
-    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" },
-    "./theme": { "types": "./dist/theme/index.d.ts", "import": "./dist/theme/index.js" },
-    "./theme/tokens": { "types": "./dist/theme/tokens.d.ts", "import": "./dist/theme/tokens.js" },
-    "./theme/css": { "types": "./dist/theme/css.d.ts", "import": "./dist/theme/css.js" },
-    "./theme/tailwind": { "types": "./dist/theme/tailwind.d.ts", "import": "./dist/theme/tailwind.js" },
-    "./primitives": { "types": "./dist/primitives/index.d.ts", "import": "./dist/primitives/index.js" },
-    "./patterns": { "types": "./dist/patterns/index.d.ts", "import": "./dist/patterns/index.js" }
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./theme": {
+      "types": "./dist/theme/index.d.ts",
+      "import": "./dist/theme/index.js"
+    },
+    "./theme/tokens": {
+      "types": "./dist/theme/tokens.d.ts",
+      "import": "./dist/theme/tokens.js"
+    },
+    "./theme/css": {
+      "types": "./dist/theme/css.d.ts",
+      "import": "./dist/theme/css.js"
+    },
+    "./theme/tailwind": {
+      "types": "./dist/theme/tailwind.d.ts",
+      "import": "./dist/theme/tailwind.js"
+    },
+    "./primitives": {
+      "types": "./dist/primitives/index.d.ts",
+      "import": "./dist/primitives/index.js"
+    },
+    "./patterns": {
+      "types": "./dist/patterns/index.d.ts",
+      "import": "./dist/patterns/index.js"
+    }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
@@ -32,12 +55,20 @@
     "react-native": "*"
   },
   "peerDependenciesMeta": {
-    "react-native": { "optional": true },
-    "react-dom": { "optional": true }
+    "react-native": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
     "@types/react": "^18.3.0",
     "@types/react-dom": "^18.3.0",
+    "jsdom": "^29.0.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "typescript": "^5.6.0",
