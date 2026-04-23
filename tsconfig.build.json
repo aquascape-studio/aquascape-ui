@@ -3,8 +3,17 @@
   "compilerOptions": {
     "noEmit": false,
     "outDir": "dist",
-    "rootDir": "src"
+    "rootDir": ".",
+    "declaration": true
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "include": [
+    "index.ts",
+    "theme/**/*.ts",
+    "theme/**/*.tsx",
+    "primitives/**/*.ts",
+    "primitives/**/*.tsx",
+    "patterns/**/*.ts",
+    "patterns/**/*.tsx"
+  ],
   "exclude": ["**/*.stories.tsx", "**/*.test.ts", "**/*.test.tsx"]
 }
