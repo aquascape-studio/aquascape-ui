@@ -1,10 +1,14 @@
 name: publish
-on:
-  push:
-    branches: [main]
 
-# Publish @aquascape/ui to GitHub Packages whenever main advances.
-# Skips the publish step if the version in package.json already exists.
+# Manual-only until the scope owner question is resolved. GitHub Packages
+# requires `@aquascape/*` to be owned by a `aquascape` user or org; today
+# repos live under `lixiangdapanji`. Two options:
+#   (a) rename package to @lixiangdapanji/ui
+#   (b) create GitHub org `aquascape` and transfer
+# When either lands, flip the trigger below to `push: branches: [main]`.
+
+on:
+  workflow_dispatch:
 
 jobs:
   publish:
