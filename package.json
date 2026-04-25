@@ -1,5 +1,5 @@
 {
-  "name": "@aquascape/ui",
+  "name": "@aquascape-studio/ui",
   "version": "0.1.0",
   "description": "Aquascape-studio shared React primitives — ink-green design system",
   "type": "module",
