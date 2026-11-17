@@ -6,8 +6,6 @@ export type PlantDifficulty = 'easy' | 'medium' | 'hard';
 export interface PlantChipProps extends HTMLAttributes<HTMLSpanElement> {
   /** Scientific name, e.g. "Eleocharis acicularis". */
   name: string;
-  /** Optional Simplified Chinese name, rendered muted. */
-  nameZh?: string;
   difficulty?: PlantDifficulty;
 }
 
@@ -18,7 +16,7 @@ const difficultyDot: Record<PlantDifficulty, string> = {
 };
 
 export const PlantChip = forwardRef<HTMLSpanElement, PlantChipProps>(function PlantChip(
-  { name, nameZh, difficulty, className, ...rest },
+  { name, difficulty, className, ...rest },
   ref,
 ) {
   return (
@@ -39,7 +37,6 @@ export const PlantChip = forwardRef<HTMLSpanElement, PlantChipProps>(function Pl
         />
       ) : null}
       <span className="font-sans">{name}</span>
-      {nameZh ? <span className="font-serif text-muted-foreground">{nameZh}</span> : null}
     </span>
   );
 });
